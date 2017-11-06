@@ -3,6 +3,10 @@
 
 A layout to transition between two views using a Floating Action Button as shown in many Material Design concepts
 
+### API Level & AVD setting  
+
+API 23 & Nexus S
+
 ### Usage
 
 <img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif">
@@ -82,8 +86,8 @@ An Android application to practice students’ ability in solving algebraic equa
 
 ### Answer Question
 
-<img src="https://cl.ly/0F3E2p3n1v0x/Screen%20Recording%202017-11-06%20at%2005.12%20%E4%B8%8B%E5%8D%88.gif />
-
+<img src="https://cl.ly/0F3E2p3n1v0x/Screen%20Recording%202017-11-06%20at%2005.12%20%E4%B8%8B%E5%8D%88.gif">
+</img>
 You can get the right answer after you click “submit’ button, You can hear different audio effect when you get right and wrong answer.
 
 ``` java
@@ -107,16 +111,12 @@ if ((equal_res(user_answer1, res1) && res_num == 1) ||
 
 ### Proper Format
 
-
-
-<img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif />
-
+<img src="https://cl.ly/0z0o2n0y201M/Screen%20Recording%202017-11-06%20at%2005.15%20%E4%B8%8B%E5%8D%88.gif">
+</img>
 Error messages should be displayed if the answer is not of proper format.
 
 ### Finish it!
-
-
-<img src="https://cl.ly/2l1z1n1R0f3x/Screen%20Recording%202017-11-06%20at%2005.17%20%E4%B8%8B%E5%8D%88.gif />
-
+<img src="https://cl.ly/2l1z1n1R0f3x/Screen%20Recording%202017-11-06%20at%2005.17%20%E4%B8%8B%E5%8D%88.gif">
+</img>
 After completing 10 questions, display a summary telling the user the number of questions that has answered correctly, wrongly and given up. The summary should also inform the user the average time spent on each linear equation question and that on each quadratic equation question.
 
