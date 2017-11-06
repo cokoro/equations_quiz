@@ -1,105 +1,118 @@
-# FABRevealLayout 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FABRevealLayout-green.svg?style=flat)](https://android-arsenal.com/details/1/2459)
+# Equations_quiz 
+[![Android Arsenal](https://cl.ly/253C1R0I391q)
 
 A layout to transition between two views using a Floating Action Button as shown in many Material Design concepts
 
 ### Usage
 
-![Sample 1](art/fabrl_mgsv.gif)
+![Sample 1](https://cl.ly/2v260F2M2337)
 
-`FABRevealLayout` is very simple to use. You only need to include a `FloatingActionButton` from the Android Design Support Library and two views (namely main and secondary) within the layout. `FABRevealLayout` will position your views accordingly and provide the transition between them automatically.
+An Android application to practice students’ ability in solving algebraic equations. The application focus on linear and quadratic equations,in the form of a quiz in which 10 random questions are generated in sequence. The first 5 questions are about linear equation while the next 5 questions are about quadratic equation. 
 
 ``` xml
-<com.truizlop.fabreveallayout.FABRevealLayout
-    android:id="@+id/fab_reveal_layout"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/fab_reveal_height"
-    >
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:backgroundTint="@color/some_color"
-        android:src="@drawable/some_drawable"
-        />
+    <ImageView
+        android:id="@+id/game_cover_image"
+        android:src="@drawable/mgs"
+        style="@style/GameCoverStyle" />
 
-    <RelativeLayout
-        android:id="@+id/main_view"
+    <com.truizlop.fabreveallayout.FABRevealLayout
+        android:id="@+id/fab_reveal_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="@dimen/fab_reveal_height"
+        >
 
-		...
-    </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/fab"
+            android:src="@drawable/ic_add_shopping_cart"
+            />
 
-    <RelativeLayout
-        android:id="@+id/secondary_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
-		...
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true">
 
-</com.truizlop.fabreveallayout.FABRevealLayout>
+                <TextView
+                    android:id="@+id/game_title_text"
+                    android:text="@string/game_title"
+                    style="@style/GameTitleStyle" />
+
+                <TextView
+                    android:id="@+id/creator_name_text"
+                    android:text="@string/creator_name"
+                    style="@style/GameCreatorStyle" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_to_shopping_cart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+    </com.truizlop.fabreveallayout.FABRevealLayout>
+</LinearLayout>
 ```
 
-Please note that the secondary view should have a transparent background so that the color animation works correctly.
 
-### Further animation
+### Answer Question
 
-![Sample 2](art/fabrl_qotsa.gif)
+![Sample 2](https://cl.ly/0F3E2p3n1v0x)
 
-If you want to animate the items inside the views of a `FABRevealLayout` or perform any other action when the transition is completed, you can register a listener.
+You can get the right answer after you click “submit’ button, You can hear different audio effect when you get right and wrong answer.
 
 ``` java
-private void configureFABReveal(FABRevealLayout fabRevealLayout) {
-    fabRevealLayout.setOnRevealChangeListener(new OnRevealChangeListener() {
-        @Override
-        public void onMainViewAppeared(FABRevealLayout fabRevealLayout, View mainView) {}
-
-        @Override
-        public void onSecondaryViewAppeared(final FABRevealLayout fabRevealLayout, View secondaryView) {}
-    });
-}
+if ((equal_res(user_answer1, res1) && res_num == 1) ||
+                        (equal_res(user_answer1, res1) && equal_res(user_answer2, res2)) ||
+                        (equal_res(user_answer1, res2) && equal_res(user_answer2, res1))) {
+                    result = "Correct! ";
+                    right += 1;
+                    if (!mediaPlayerS.isPlaying()) {
+                        mediaPlayerS.start();
+                    }
+                }else {
+                    result = "Wrong! ";
+                    wrong += 1;
+                    if (!mediaPlayerF.isPlaying()) {
+                        mediaPlayerF.start();
+                    }
+                }
 ```
 
-Also, to trigger the reveal and hide animations programmatically, you can use the following methods:
 
-``` java
-fabRevealLayout.revealMainView();
-fabRevealLayout.revealSecondaryView();
-```
+### Proper Format
 
-### Limitations
+![Sample 3](https://cl.ly/0z0o2n0y201M)
 
-Currently, both main and secondary views inside `FABRevealLayout` should have the same height so that the animation works properly.
+Error messages should be displayed if the answer is not of proper format.
 
-### Get it!
+### Finish it!
 
-`FABRevealLayout` is available through JCenter. To be able to use this library in your project, add the following dependency to your `build.gradle` file:
+![Sample 3](https://cl.ly/2l1z1n1R0f3x)
 
-```groovy
-dependencies{
-	compile 'com.truizlop.fabreveallayout:library:1.0.0'
-}
-```
+After completing 10 questions, display a summary telling the user the number of questions that has answered correctly, wrongly and given up. The summary should also inform the user the average time spent on each linear equation question and that on each quadratic equation question.
 
-### Acknowledgements
-
-`FABRevealLayout` is based on this [proof of concept](https://github.com/saulmm/Curved-Fab-Reveal-Example) by Saúl Molinero and the explanations for [curved animations](http://graphics-geek.blogspot.com.es/2012/01/curved-motion-in-android.html) by Chet Haase.
-
-## License
-
-
-    Copyright 2015 Tomás Ruiz-López
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
