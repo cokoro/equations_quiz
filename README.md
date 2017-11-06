@@ -1,5 +1,5 @@
 # Equations_quiz 
- ![image1]https://cl.ly/253C1R0I391q
+<img src="https://cl.ly/253C1R0I391q" />
 
 A layout to transition between two views using a Floating Action Button as shown in many Material Design concepts
 
