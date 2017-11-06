@@ -5,7 +5,7 @@ A layout to transition between two views using a Floating Action Button as shown
 
 ### Usage
 
- ![image2]https://cl.ly/2v260F2M2337)
+<img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif />
 
 An Android application to practice students’ ability in solving algebraic equations. The application focus on linear and quadratic equations,in the form of a quiz in which 10 random questions are generated in sequence. The first 5 questions are about linear equation while the next 5 questions are about quadratic equation. 
 
@@ -81,7 +81,7 @@ An Android application to practice students’ ability in solving algebraic equa
 
 ### Answer Question
 
- ![image3](https://cl.ly/0F3E2p3n1v0x)
+<img src="https://cl.ly/0F3E2p3n1v0x/Screen%20Recording%202017-11-06%20at%2005.12%20%E4%B8%8B%E5%8D%88.gif />
 
 You can get the right answer after you click “submit’ button, You can hear different audio effect when you get right and wrong answer.
 
@@ -106,13 +106,16 @@ if ((equal_res(user_answer1, res1) && res_num == 1) ||
 
 ### Proper Format
 
- ![image4](https://cl.ly/0z0o2n0y201M)
+
+
+<img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif />
 
 Error messages should be displayed if the answer is not of proper format.
 
 ### Finish it!
 
- ![image5](https://cl.ly/2l1z1n1R0f3x)
+
+<img src="https://cl.ly/2l1z1n1R0f3x/Screen%20Recording%202017-11-06%20at%2005.17%20%E4%B8%8B%E5%8D%88.gif />
 
 After completing 10 questions, display a summary telling the user the number of questions that has answered correctly, wrongly and given up. The summary should also inform the user the average time spent on each linear equation question and that on each quadratic equation question.
 
