@@ -5,7 +5,8 @@ A layout to transition between two views using a Floating Action Button as shown
 
 ### Usage
 
-<img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif />
+<img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif">
+</img>
 
 An Android application to practice students’ ability in solving algebraic equations. The application focus on linear and quadratic equations,in the form of a quiz in which 10 random questions are generated in sequence. The first 5 questions are about linear equation while the next 5 questions are about quadratic equation. 
 
