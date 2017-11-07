@@ -90,13 +90,15 @@ which will be loaded when the “Start Quiz” button on the first page is press
 #### Part 2
 On the second page, A layout contains:
   1 TextView field for displaying the question
-  2 EditText fields for inputting the answer (Note: If the question is about
-linear equation or if the question is about quadratic equation but there is
-only one root, one of the EditText fields should be disabled.)
+  2 EditText fields for inputting the answer
   1 Button for submitting the answer
   1 TextView for displaying the correctness of the input answer and the
 correct answer
-  1 Button for proceeding to the next question
+  1 Button for proceeding to the next question.
+  
+  
+If the question is about linear equation or if the question is about quadratic equation but there is
+only one root, one of the EditText fields should be disabled.
 
 
 <img src="https://cl.ly/0z0B2B3v3C2f/Screen%20Recording%202017-11-07%20at%2009.33%20%E4%B8%8B%E5%8D%88.gif" />
@@ -113,8 +115,42 @@ while ((question_no > linear_num  && ((B*B - 4 * A * C) < 0) ) || (A == 0)){
         }
 ```
 
-### Answer Question
+#### Part 4
+Calculate the correct answer(s).
+``` java
 
+if (question_no > linear_num) {
+        if (B * B - 4 * A * C == 0){
+            res1 = -((double)B) / (2*A);
+            res_num = 1;
+            res2 = 0;
+        } else {
+            res_num = 2;
+            res1 = (-((double)B) + sqrt(B * B - 4 * A * C)) / (2 * A);
+            res2 = (-((double)B) - sqrt(B * B - 4 * A * C)) / (2 * A);
+        }
+}else{
+    res_num = 1;
+    res2 = 0;
+    res1 = -((double)B) / A;
+}
+``` 
+#### Part 5
+Display the generated question in proper format.
+<img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif" />
+
+
+### Proper Format
+
+#### Part 6
+<img src="https://cl.ly/0z0o2n0y201M/Screen%20Recording%202017-11-06%20at%2005.15%20%E4%B8%8B%E5%8D%88.gif">
+</img>
+Error messages should be displayed if the answer is not of proper format.
+
+
+### Answer Question
+#### Part 7
+Compare the input answer with the correct one.
 <img src="https://cl.ly/0F3E2p3n1v0x/Screen%20Recording%202017-11-06%20at%2005.12%20%E4%B8%8B%E5%8D%88.gif">
 </img>
 You can get the right answer after you click “submit’ button, You can hear different audio effect when you get right and wrong answer.
@@ -137,15 +173,18 @@ if ((equal_res(user_answer1, res1) && res_num == 1) ||
                 }
 ```
 
-
-### Proper Format
-
-<img src="https://cl.ly/0z0o2n0y201M/Screen%20Recording%202017-11-06%20at%2005.15%20%E4%B8%8B%E5%8D%88.gif">
-</img>
-Error messages should be displayed if the answer is not of proper format.
+#### Part 8
+Let the user proceed to the next question and repeat above.
+<img src="https://cl.ly/3H3M0J332u3d/Screen%20Recording%202017-11-07%20at%2009.56%20%E4%B8%8B%E5%8D%88.gif" />
 
 ### Finish it!
+#### Part 9
 <img src="https://cl.ly/2l1z1n1R0f3x/Screen%20Recording%202017-11-06%20at%2005.17%20%E4%B8%8B%E5%8D%88.gif">
 </img>
 After completing 10 questions, display a summary telling the user the number of questions that has answered correctly, wrongly and given up. The summary should also inform the user the average time spent on each linear equation question and that on each quadratic equation question.
+
+### Bonus have done
+Nice user interface. 
+Fluent quiz flow.
+Additional features
 
