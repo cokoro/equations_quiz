@@ -136,8 +136,9 @@ if (question_no > linear_num) {
 }
 ``` 
 #### Part 5
-Display the generated question in proper format.
 <img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif" />
+
+Display the generated question in proper format.
 
 
 ### Proper Format
@@ -150,9 +151,10 @@ Error messages should be displayed if the answer is not of proper format.
 
 ### Answer Question
 #### Part 7
-Compare the input answer with the correct one.
 <img src="https://cl.ly/0F3E2p3n1v0x/Screen%20Recording%202017-11-06%20at%2005.12%20%E4%B8%8B%E5%8D%88.gif">
 </img>
+Compare the input answer with the correct one.
+
 You can get the right answer after you click “submit’ button, You can hear different audio effect when you get right and wrong answer.
 
 ``` java
@@ -174,8 +176,8 @@ if ((equal_res(user_answer1, res1) && res_num == 1) ||
 ```
 
 #### Part 8
-Let the user proceed to the next question and repeat above.
 <img src="https://cl.ly/3H3M0J332u3d/Screen%20Recording%202017-11-07%20at%2009.56%20%E4%B8%8B%E5%8D%88.gif" />
+Let the user proceed to the next question and repeat above.
 
 ### Finish it!
 #### Part 9
@@ -185,6 +187,6 @@ After completing 10 questions, display a summary telling the user the number of 
 
 ### Bonus have done
 Nice user interface. 
-Fluent quiz flow.
-Additional features
+ && Fluent quiz flow.
+ && Additional features
 
