@@ -8,11 +8,14 @@ A layout to transition between two views using a Floating Action Button as shown
 API 23 & Nexus S
 
 ### Usage
-
+#### Part 1
 <img src="https://cl.ly/2v260F2M2337/Screen%20Recording%202017-11-06%20at%2005.09%20%E4%B8%8B%E5%8D%88.gif">
 </img>
 
 An Android application to practice students’ ability in solving algebraic equations. The application focus on linear and quadratic equations,in the form of a quiz in which 10 random questions are generated in sequence. The first 5 questions are about linear equation while the next 5 questions are about quadratic equation. 
+
+The first page contain name and university number for identification purpose. The second page is the quiz main frame
+which will be loaded when the “Start Quiz” button on the first page is pressed.
 
 ``` xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -83,6 +86,32 @@ An Android application to practice students’ ability in solving algebraic equa
 </LinearLayout>
 ```
 
+
+#### Part 2
+On the second page, A layout contains:
+  1 TextView field for displaying the question
+  2 EditText fields for inputting the answer (Note: If the question is about
+linear equation or if the question is about quadratic equation but there is
+only one root, one of the EditText fields should be disabled.)
+  1 Button for submitting the answer
+  1 TextView for displaying the correctness of the input answer and the
+correct answer
+  1 Button for proceeding to the next question
+
+
+<img src="https://cl.ly/0z0B2B3v3C2f/Screen%20Recording%202017-11-07%20at%2009.33%20%E4%B8%8B%E5%8D%88.gif" />
+
+
+#### Part 3
+A random question generato
+The generated quadratic equation has real roots (that is determinant B2 – 4AC >= 0)
+``` java
+while ((question_no > linear_num  && ((B*B - 4 * A * C) < 0) ) || (A == 0)){
+            A = random.nextInt(max) - subtraction;
+            B = random.nextInt(max) - subtraction;
+            C = random.nextInt(max) - subtraction;
+        }
+```
 
 ### Answer Question
 
