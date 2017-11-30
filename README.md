@@ -190,3 +190,4 @@ Nice user interface.
  && Fluent quiz flow.
  && Additional features
 
+https://github.com/cokoro/equations_quiz/tree/master/sample/src/main/java/com/truizlop/fabreveallayoutsample2
