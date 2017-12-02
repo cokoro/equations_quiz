@@ -191,3 +191,6 @@ Nice user interface.
  && Additional features
 
 https://github.com/cokoro/equations_quiz/tree/master/sample/src/main/java/com/truizlop/fabreveallayoutsample2
+
+
+https://github.com/cokoro/equations_quiz/tree/master/sample/src/main/res/layout
